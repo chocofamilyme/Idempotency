@@ -1,5 +1,5 @@
 {
-    "name": "soapbox/idempotency",
+    "name": "chocofamilyme/idempotency",
     "type": "library",
     "description": "A Laravel library that manages idempotency keys for a request",
     "license": "MIT",

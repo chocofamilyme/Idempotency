@@ -1,6 +1,6 @@
 <?php
 
-namespace SoapBox\Idempotency;
+namespace Chocofamily\Idempotency;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;

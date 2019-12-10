@@ -1,11 +1,11 @@
 <?php
 
-namespace SoapBox\Idempotency\Tests\Unit\Laravel;
+namespace Chocofamily\Idempotency\Tests\Unit\Laravel;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use SoapBox\Idempotency\Tests\TestCase;
-use SoapBox\Idempotency\Laravel\Middleware;
+use Chocofamily\Idempotency\Tests\TestCase;
+use Chocofamily\Idempotency\Laravel\Middleware;
 
 class MiddlewareTest extends TestCase
 {

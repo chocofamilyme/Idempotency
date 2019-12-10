@@ -1,6 +1,6 @@
 <?php
 
-namespace SoapBox\Idempotency;
+namespace Chocofamily\Idempotency;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;

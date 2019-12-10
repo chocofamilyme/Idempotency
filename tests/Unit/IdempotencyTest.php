@@ -1,17 +1,17 @@
 <?php
 
-namespace SoapBox\Idempotency\Tests\Unit;
+namespace Chocofamily\Idempotency\Tests\Unit;
 
 use Exception;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
-use SoapBox\Idempotency\Idempotency;
+use Chocofamily\Idempotency\Idempotency;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Cache;
-use SoapBox\Idempotency\Tests\TestCase;
+use Chocofamily\Idempotency\Tests\TestCase;
 use Illuminate\Support\Facades\Validator;
-use SoapBox\Idempotency\Tests\Doubles\TestCacheStore;
-use SoapBox\Idempotency\Tests\Doubles\TestSerializedCacheStore;
+use Chocofamily\Idempotency\Tests\Doubles\TestCacheStore;
+use Chocofamily\Idempotency\Tests\Doubles\TestSerializedCacheStore;
 
 class IdempotencyTest extends TestCase
 {

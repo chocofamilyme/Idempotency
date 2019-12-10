@@ -1,10 +1,10 @@
 <?php
 
-namespace SoapBox\Idempotency\Laravel;
+namespace Chocofamily\Idempotency\Laravel;
 
 use Closure;
 use Illuminate\Http\Request;
-use SoapBox\Idempotency\Idempotency;
+use Chocofamily\Idempotency\Idempotency;
 
 class Middleware
 {

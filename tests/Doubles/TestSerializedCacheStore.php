@@ -1,6 +1,6 @@
 <?php
 
-namespace SoapBox\Idempotency\Tests\Doubles;
+namespace Chocofamily\Idempotency\Tests\Doubles;
 
 use Illuminate\Cache\ArrayStore;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace SoapBox\Idempotency\Guzzle;
+namespace Chocofamily\Idempotency\Guzzle;
 
 use Ramsey\Uuid\Uuid;
-use SoapBox\Idempotency\Idempotency;
+use Chocofamily\Idempotency\Idempotency;
 use Psr\Http\Message\RequestInterface;
 
 class Middleware

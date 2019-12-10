@@ -1,11 +1,11 @@
 <?php
 
-namespace SoapBox\Idempotency\Tests\Unit\Guzzle;
+namespace Chocofamily\Idempotency\Tests\Unit\Guzzle;
 
 use GuzzleHttp\RetryMiddleware;
 use JSHayes\FakeRequests\ClientFactory;
-use SoapBox\Idempotency\Tests\TestCase;
-use SoapBox\Idempotency\Guzzle\Middleware;
+use Chocofamily\Idempotency\Tests\TestCase;
+use Chocofamily\Idempotency\Guzzle\Middleware;
 use JSHayes\FakeRequests\Traits\Laravel\FakeRequests;
 
 class MiddlewareTest extends TestCase

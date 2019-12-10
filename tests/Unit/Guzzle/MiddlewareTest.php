@@ -6,7 +6,7 @@ use GuzzleHttp\RetryMiddleware;
 use JSHayes\FakeRequests\ClientFactory;
 use Chocofamily\Idempotency\Tests\TestCase;
 use Chocofamily\Idempotency\Guzzle\Middleware;
-use JSHayes\FakeRequests\Traits\Laravel\FakeRequests;
+//use JSHayes\FakeRequests\Traits\Laravel\FakeRequests;
 
 /**
  * Class MiddlewareTest

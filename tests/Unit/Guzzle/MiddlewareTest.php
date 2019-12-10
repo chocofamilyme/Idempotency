@@ -8,6 +8,12 @@ use Chocofamily\Idempotency\Tests\TestCase;
 use Chocofamily\Idempotency\Guzzle\Middleware;
 use JSHayes\FakeRequests\Traits\Laravel\FakeRequests;
 
+/**
+ * Class MiddlewareTest
+ *
+ * @package Chocofamily\Idempotency\Tests\Unit\Guzzle
+ * @ignore Old test that needs rewriting
+ */
 class MiddlewareTest extends TestCase
 {
     use FakeRequests;

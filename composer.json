@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SoapBox\\Idempotency\\": "src/"
+            "Chocofamily\\Idempotency\\": "src/"
         }
     },
     "autoload-dev": {

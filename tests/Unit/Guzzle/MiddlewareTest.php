@@ -6,17 +6,22 @@ use GuzzleHttp\RetryMiddleware;
 use JSHayes\FakeRequests\ClientFactory;
 use Chocofamily\Idempotency\Tests\TestCase;
 use Chocofamily\Idempotency\Guzzle\Middleware;
-//use JSHayes\FakeRequests\Traits\Laravel\FakeRequests;
+use JSHayes\FakeRequests\Traits\Laravel\FakeRequests;
 
 /**
  * Class MiddlewareTest
  *
  * @package Chocofamily\Idempotency\Tests\Unit\Guzzle
- * @ignore Old test that needs rewriting
+ * @ignore  Old test that needs rewriting
  */
 class MiddlewareTest extends TestCase
 {
     use FakeRequests;
+
+    protected function setUp(): void
+    {
+        $this->markTestSkipped('Old test that needs rewriting');
+    }
 
     /**
      * @test
@@ -26,7 +31,7 @@ class MiddlewareTest extends TestCase
         config(['idempotency.header' => 'Idempotency-Key']);
 
         $handler = $this->fakeRequests();
-        $client = resolve(ClientFactory::class)->make();
+        $client  = resolve(ClientFactory::class)->make();
         $client->getConfig('handler')->push(new Middleware());
 
         $expectation = $handler->expects('post', 'https://test.test');
@@ -44,7 +49,7 @@ class MiddlewareTest extends TestCase
         config(['idempotency.header' => 'Idempotency-Key']);
 
         $handler = $this->fakeRequests();
-        $client = resolve(ClientFactory::class)->make();
+        $client  = resolve(ClientFactory::class)->make();
         $client->getConfig('handler')->push(new Middleware());
 
         $expectation = $handler->expects('put', 'https://test.test');
@@ -62,7 +67,7 @@ class MiddlewareTest extends TestCase
         config(['idempotency.header' => 'Idempotency-Key']);
 
         $handler = $this->fakeRequests();
-        $client = resolve(ClientFactory::class)->make();
+        $client  = resolve(ClientFactory::class)->make();
         $client->getConfig('handler')->push(new Middleware());
 
         $expectation = $handler->expects('patch', 'https://test.test');
@@ -80,7 +85,7 @@ class MiddlewareTest extends TestCase
         config(['idempotency.header' => 'Idempotency-Key']);
 
         $handler = $this->fakeRequests();
-        $client = resolve(ClientFactory::class)->make();
+        $client  = resolve(ClientFactory::class)->make();
         $client->getConfig('handler')->push(new Middleware());
 
         $expectation = $handler->expects('get', 'https://test.test');
@@ -98,7 +103,7 @@ class MiddlewareTest extends TestCase
         config(['idempotency.header' => 'Idempotency-Key']);
 
         $handler = $this->fakeRequests();
-        $client = resolve(ClientFactory::class)->make();
+        $client  = resolve(ClientFactory::class)->make();
         $client->getConfig('handler')->push(new Middleware());
 
         $expectation = $handler->expects('delete', 'https://test.test');
@@ -116,7 +121,7 @@ class MiddlewareTest extends TestCase
         config(['idempotency.header' => 'Idempotency-Key']);
 
         $handler = $this->fakeRequests();
-        $client = resolve(ClientFactory::class)->make();
+        $client  = resolve(ClientFactory::class)->make();
         $client->getConfig('handler')->push(new Middleware());
 
         $expectation1 = $handler->expects('post', 'https://test.test');
@@ -139,13 +144,13 @@ class MiddlewareTest extends TestCase
     {
         config(['idempotency.header' => 'Idempotency-Key']);
 
-        $handler = $this->fakeRequests();
+        $handler    = $this->fakeRequests();
         $middleware = function ($handler) {
             return function ($request, $options) use ($handler) {
                 return $handler(with($request), $options);
             };
         };
-        $client = resolve(ClientFactory::class)->make();
+        $client     = resolve(ClientFactory::class)->make();
         $client->getConfig('handler')->push($middleware);
         $client->getConfig('handler')->push(new Middleware());
 

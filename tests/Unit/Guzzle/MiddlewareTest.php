@@ -16,7 +16,7 @@ use JSHayes\FakeRequests\Traits\Laravel\FakeRequests;
  */
 class MiddlewareTest extends TestCase
 {
-    use FakeRequests;
+    //use FakeRequests;
 
     protected function setUp(): void
     {

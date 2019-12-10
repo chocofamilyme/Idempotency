@@ -6,7 +6,6 @@
     "require": {
         "ramsey/uuid": "^3.8",
         "guzzlehttp/psr7": "^1.4",
-        "illuminate/support": "^6.1"
     },
     "autoload": {
         "psr-4": {
@@ -19,7 +18,6 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.5",
         "orchestra/testbench": "^4.4"
     },
     "extra": {
